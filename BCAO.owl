@@ -1,0 +1,905 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://github.com/linmor-sys/BCAO.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://github.com/linmor-sys/BCAO.owl">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="bcao" IRI="https://github.com/linmor-sys/BCAO.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MSc thesis project with the aim of proposing an ontology for Building&apos;s Circularity Assessment (BCAO)</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Accessible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accessory_External"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accessory_Internal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cause_Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cause_No_Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cause_Repairable_Damage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Connection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Connection_Factors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disassembly_Factors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edge_Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edge_Standardisation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fixing_Factors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Half_Standardised"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hard_Chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Insert_On_One_Side"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Insert_On_Two_Sides"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Integral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Integral_With_Inserts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Linear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Made_On_Site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Morphology_Of_Joints"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-virgin_Input"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Not_Accessible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Open_Linear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Overlapping_On_One_Side"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pre-made"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Product_Edge_Goeometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reusable_Output"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soft_Chemical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Symmetrical_Overlapping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unsymmetrical_Overlapping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#With_Additional_Fixing_Devices"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connection_is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_edge_geometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#describes_edge_standardisation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fixing_is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#geometry_is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_connection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_connection_factors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_disassembly_factors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_fixing_factors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_geometry_factors"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_joint_morphology"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_non-virgin_input"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_opperation_that"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_reusable_output"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_direct"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_filled_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_made_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_manufactured_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_produced_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#morphology_is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#standardisation_is"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_company_location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_life_span"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_material_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_material_description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_material_mass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_material_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_material_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_model"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_non-virgin_input_mass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_product_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_reference_year"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_reusable_output_mass"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accessible"/>
+        <Class IRI="#Fixing_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accessory_External"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accessory_Internal"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cause_Damage"/>
+        <Class IRI="#Fixing_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cause_No_Damage"/>
+        <Class IRI="#Fixing_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cause_Repairable_Damage"/>
+        <Class IRI="#Fixing_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chemical"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <Class IRI="#Connection_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#connection_is"/>
+            <ObjectUnionOf>
+                <Class IRI="#Accessory_External"/>
+                <Class IRI="#Accessory_Internal"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_direct"/>
+            <ObjectUnionOf>
+                <Class IRI="#Chemical"/>
+                <Class IRI="#Integral"/>
+                <Class IRI="#Integral_With_Inserts"/>
+                <Class IRI="#With_Additional_Fixing_Devices"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#is_filled_with"/>
+            <ObjectUnionOf>
+                <Class IRI="#Hard_Chemical"/>
+                <Class IRI="#Soft_Chemical"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#connection_is"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection_Factors"/>
+        <Class IRI="#Disassembly_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection_Factors"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disassembly_Factors"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_connection_factors"/>
+                <Class IRI="#Connection"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection_Factors"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disassembly_Factors"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_fixing_factors"/>
+                <Class IRI="#Fixing_Factors"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Connection_Factors"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disassembly_Factors"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_joint_morphology"/>
+                <Class IRI="#Morphology_Of_Joints"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge_Geometry"/>
+        <Class IRI="#Product_Edge_Goeometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge_Geometry"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#geometry_is"/>
+            <ObjectUnionOf>
+                <Class IRI="#Insert_On_One_Side"/>
+                <Class IRI="#Insert_On_Two_Sides"/>
+                <Class IRI="#Open_Linear"/>
+                <Class IRI="#Overlapping_On_One_Side"/>
+                <Class IRI="#Symmetrical_Overlapping"/>
+                <Class IRI="#Unsymmetrical_Overlapping"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge_Geometry"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#geometry_is"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge_Standardisation"/>
+        <Class IRI="#Product_Edge_Goeometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge_Standardisation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#standardisation_is"/>
+            <ObjectUnionOf>
+                <Class IRI="#Half_Standardised"/>
+                <Class IRI="#Made_On_Site"/>
+                <Class IRI="#Pre-made"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge_Standardisation"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#standardisation_is"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fixing_Factors"/>
+        <Class IRI="#Connection_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fixing_Factors"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#fixing_is"/>
+            <ObjectUnionOf>
+                <Class IRI="#Accessible"/>
+                <Class IRI="#Not_Accessible"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fixing_Factors"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#has_opperation_that"/>
+            <ObjectUnionOf>
+                <Class IRI="#Cause_Damage"/>
+                <Class IRI="#Cause_No_Damage"/>
+                <Class IRI="#Cause_Repairable_Damage"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fixing_Factors"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#fixing_is"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Half_Standardised"/>
+        <Class IRI="#Edge_Standardisation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hard_Chemical"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insert_On_One_Side"/>
+        <Class IRI="#Edge_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Insert_On_Two_Sides"/>
+        <Class IRI="#Edge_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integral"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integral_With_Inserts"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knot"/>
+        <Class IRI="#Morphology_Of_Joints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Linear"/>
+        <Class IRI="#Morphology_Of_Joints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Made_On_Site"/>
+        <Class IRI="#Edge_Standardisation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Morphology_Of_Joints"/>
+        <Class IRI="#Connection_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Morphology_Of_Joints"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#morphology_is"/>
+            <ObjectUnionOf>
+                <Class IRI="#Knot"/>
+                <Class IRI="#Linear"/>
+                <Class IRI="#Point"/>
+                <Class IRI="#Service"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Morphology_Of_Joints"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#morphology_is"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Not_Accessible"/>
+        <Class IRI="#Fixing_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Open_Linear"/>
+        <Class IRI="#Edge_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Overlapping_On_One_Side"/>
+        <Class IRI="#Edge_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Point"/>
+        <Class IRI="#Morphology_Of_Joints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pre-made"/>
+        <Class IRI="#Edge_Standardisation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_disassembly_factors"/>
+            <Class IRI="#Disassembly_Factors"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_made_of"/>
+            <Class IRI="#Material"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#is_manufactured_by"/>
+            <Class IRI="#Company"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product_Edge_Goeometry"/>
+        <Class IRI="#Disassembly_Factors"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product_Edge_Goeometry"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disassembly_Factors"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_geometry_factors"/>
+                <Class IRI="#Edge_Geometry"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product_Edge_Goeometry"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Disassembly_Factors"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#has_geometry_factors"/>
+                <Class IRI="#Edge_Standardisation"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Service"/>
+        <Class IRI="#Morphology_Of_Joints"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soft_Chemical"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Symmetrical_Overlapping"/>
+        <Class IRI="#Edge_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unsymmetrical_Overlapping"/>
+        <Class IRI="#Edge_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#With_Additional_Fixing_Devices"/>
+        <Class IRI="#Connection"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Accessible"/>
+        <Class IRI="#Cause_Damage"/>
+        <Class IRI="#Cause_No_Damage"/>
+        <Class IRI="#Cause_Repairable_Damage"/>
+        <Class IRI="#Not_Accessible"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Accessory_External"/>
+        <Class IRI="#Accessory_Internal"/>
+        <Class IRI="#Chemical"/>
+        <Class IRI="#Hard_Chemical"/>
+        <Class IRI="#Integral"/>
+        <Class IRI="#Integral_With_Inserts"/>
+        <Class IRI="#Soft_Chemical"/>
+        <Class IRI="#With_Additional_Fixing_Devices"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Company"/>
+        <Class IRI="#Disassembly_Factors"/>
+        <Class IRI="#Material"/>
+        <Class IRI="#Non-virgin_Input"/>
+        <Class IRI="#Product"/>
+        <Class IRI="#Reusable_Output"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Company"/>
+        <Class IRI="#Material"/>
+        <Class IRI="#Product"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Connection"/>
+        <Class IRI="#Fixing_Factors"/>
+        <Class IRI="#Morphology_Of_Joints"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Edge_Geometry"/>
+        <Class IRI="#Edge_Standardisation"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Half_Standardised"/>
+        <Class IRI="#Made_On_Site"/>
+        <Class IRI="#Pre-made"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Insert_On_One_Side"/>
+        <Class IRI="#Insert_On_Two_Sides"/>
+        <Class IRI="#Open_Linear"/>
+        <Class IRI="#Overlapping_On_One_Side"/>
+        <Class IRI="#Symmetrical_Overlapping"/>
+        <Class IRI="#Unsymmetrical_Overlapping"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#connection_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_edge_geometry"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#describes_edge_standardisation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fixing_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#geometry_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_connection"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_connection_factors"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_fixing_factors"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_geometry_factors"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_joint_morphology"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_non-virgin_input"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_opperation_that"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_reusable_output"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_made_of"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#morphology_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#is_manufactured_by"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#is_produced_by"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_connection"/>
+        <Class IRI="#Connection_Factors"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_connection_factors"/>
+        <Class IRI="#Disassembly_Factors"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_fixing_factors"/>
+        <Class IRI="#Connection_Factors"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_geometry_factors"/>
+        <Class IRI="#Disassembly_Factors"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_non-virgin_input"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_reusable_output"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_produced_by"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_connection"/>
+        <Class IRI="#Connection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_connection_factors"/>
+        <Class IRI="#Connection_Factors"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_fixing_factors"/>
+        <Class IRI="#Fixing_Factors"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_geometry_factors"/>
+        <Class IRI="#Product_Edge_Goeometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_non-virgin_input"/>
+        <Class IRI="#Non-virgin_Input"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_reusable_output"/>
+        <Class IRI="#Reusable_Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_produced_by"/>
+        <Class IRI="#Company"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#has_material_name"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_life_span"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_material_mass"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_material_type"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_model"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_non-virgin_input_mass"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_product_ID"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_reference_year"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_reusable_output_mass"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_company_location"/>
+        <Class IRI="#Company"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_life_span"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_material_ID"/>
+        <Class IRI="#Material"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_material_description"/>
+        <Class IRI="#Material"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_material_mass"/>
+        <Class IRI="#Material"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_material_name"/>
+        <Class IRI="#Material"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_material_type"/>
+        <Class IRI="#Material"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_model"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_non-virgin_input_mass"/>
+        <Class IRI="#Non-virgin_Input"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_product_ID"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_product_description"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_product_location"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_product_name"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_product_type"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_reference_year"/>
+        <Class IRI="#Product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_reusable_output_mass"/>
+        <Class IRI="#Reusable_Output"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_company_location"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_life_span"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_material_ID"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_material_description"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_material_mass"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_material_name"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_material_type"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_model"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_non-virgin_input_mass"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_ID"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_description"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_location"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_name"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_product_type"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_reference_year"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_reusable_output_mass"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

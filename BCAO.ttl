@@ -1,0 +1,654 @@
+@prefix : <https://github.com/linmor-sys/BCAO.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bcao: <https://github.com/linmor-sys/BCAO.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://github.com/linmor-sys/BCAO.owl> .
+
+<https://github.com/linmor-sys/BCAO.owl> rdf:type owl:Ontology ;
+                                          rdfs:comment "MSc thesis project with the aim of proposing an ontology for Building's Circularity Assessment (BCAO)"^^rdfs:Literal .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/linmor-sys/BCAO.owl#connection_is
+bcao:connection_is rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#describes_edge_geometry
+bcao:describes_edge_geometry rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#describes_edge_standardisation
+bcao:describes_edge_standardisation rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#fixing_is
+bcao:fixing_is rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#geometry_is
+bcao:geometry_is rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_connection
+bcao:has_connection rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain bcao:Connection_Factors ;
+                    rdfs:range bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_connection_factors
+bcao:has_connection_factors rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain bcao:Disassembly_Factors ;
+                            rdfs:range bcao:Connection_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_disassembly_factors
+bcao:has_disassembly_factors rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_fixing_factors
+bcao:has_fixing_factors rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain bcao:Connection_Factors ;
+                        rdfs:range bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_geometry_factors
+bcao:has_geometry_factors rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain bcao:Disassembly_Factors ;
+                          rdfs:range bcao:Product_Edge_Goeometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_joint_morphology
+bcao:has_joint_morphology rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_non-virgin_input
+bcao:has_non-virgin_input rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain bcao:Material ;
+                          rdfs:range bcao:Non-virgin_Input .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_opperation_that
+bcao:has_opperation_that rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_reusable_output
+bcao:has_reusable_output rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain bcao:Material ;
+                         rdfs:range bcao:Reusable_Output .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_direct
+bcao:is_direct rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_filled_with
+bcao:is_filled_with rdf:type owl:ObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_made_of
+bcao:is_made_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_manufactured_by
+bcao:is_manufactured_by rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_produced_by
+bcao:is_produced_by rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain bcao:Material ;
+                    rdfs:range bcao:Company .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#morphology_is
+bcao:morphology_is rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#standardisation_is
+bcao:standardisation_is rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://github.com/linmor-sys/BCAO.owl#has_company_location
+bcao:has_company_location rdf:type owl:DatatypeProperty ;
+                          rdfs:domain bcao:Company ;
+                          rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_life_span
+bcao:has_life_span rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain bcao:Product ;
+                   rdfs:range xsd:integer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_ID
+bcao:has_material_ID rdf:type owl:DatatypeProperty ;
+                     rdfs:domain bcao:Material ;
+                     rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_description
+bcao:has_material_description rdf:type owl:DatatypeProperty ;
+                              rdfs:domain bcao:Material ;
+                              rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_mass
+bcao:has_material_mass rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain bcao:Material ;
+                       rdfs:range xsd:float .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_name
+bcao:has_material_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain bcao:Material ;
+                       rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_type
+bcao:has_material_type rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain bcao:Material ;
+                       rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_model
+bcao:has_model rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain bcao:Product ;
+               rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_non-virgin_input_mass
+bcao:has_non-virgin_input_mass rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain bcao:Non-virgin_Input ;
+                               rdfs:range xsd:float .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_ID
+bcao:has_product_ID rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain bcao:Product ;
+                    rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_description
+bcao:has_product_description rdf:type owl:DatatypeProperty ;
+                             rdfs:domain bcao:Product ;
+                             rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_location
+bcao:has_product_location rdf:type owl:DatatypeProperty ;
+                          rdfs:domain bcao:Product ;
+                          rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_name
+bcao:has_product_name rdf:type owl:DatatypeProperty ;
+                      rdfs:domain bcao:Product ;
+                      rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_type
+bcao:has_product_type rdf:type owl:DatatypeProperty ;
+                      rdfs:domain bcao:Product ;
+                      rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_reference_year
+bcao:has_reference_year rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain bcao:Product ;
+                        rdfs:range xsd:integer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_reusable_output_mass
+bcao:has_reusable_output_mass rdf:type owl:DatatypeProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain bcao:Reusable_Output ;
+                              rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessible
+bcao:Accessible rdf:type owl:Class ;
+                rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessory_External
+bcao:Accessory_External rdf:type owl:Class ;
+                        rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessory_Internal
+bcao:Accessory_Internal rdf:type owl:Class ;
+                        rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Cause_Damage
+bcao:Cause_Damage rdf:type owl:Class ;
+                  rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Cause_No_Damage
+bcao:Cause_No_Damage rdf:type owl:Class ;
+                     rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Cause_Repairable_Damage
+bcao:Cause_Repairable_Damage rdf:type owl:Class ;
+                             rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Chemical
+bcao:Chemical rdf:type owl:Class ;
+              rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Company
+bcao:Company rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Connection
+bcao:Connection rdf:type owl:Class ;
+                rdfs:subClassOf bcao:Connection_Factors ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty bcao:connection_is ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( bcao:Accessory_External
+                                                                    bcao:Accessory_Internal
+                                                                  )
+                                                    ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty bcao:is_direct ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( bcao:Chemical
+                                                                    bcao:Integral
+                                                                    bcao:Integral_With_Inserts
+                                                                    bcao:With_Additional_Fixing_Devices
+                                                                  )
+                                                    ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty bcao:is_filled_with ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( bcao:Hard_Chemical
+                                                                    bcao:Soft_Chemical
+                                                                  )
+                                                    ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty bcao:connection_is ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Connection_Factors
+bcao:Connection_Factors rdf:type owl:Class ;
+                        rdfs:subClassOf bcao:Disassembly_Factors ,
+                                        [ owl:intersectionOf ( bcao:Disassembly_Factors
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty bcao:has_connection_factors ;
+                                                                 owl:someValuesFrom bcao:Connection
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ,
+                                        [ owl:intersectionOf ( bcao:Disassembly_Factors
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty bcao:has_fixing_factors ;
+                                                                 owl:someValuesFrom bcao:Fixing_Factors
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ,
+                                        [ owl:intersectionOf ( bcao:Disassembly_Factors
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty bcao:has_joint_morphology ;
+                                                                 owl:someValuesFrom bcao:Morphology_Of_Joints
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Disassembly_Factors
+bcao:Disassembly_Factors rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Edge_Geometry
+bcao:Edge_Geometry rdf:type owl:Class ;
+                   rdfs:subClassOf bcao:Product_Edge_Goeometry ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bcao:geometry_is ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( bcao:Insert_On_One_Side
+                                                                       bcao:Insert_On_Two_Sides
+                                                                       bcao:Open_Linear
+                                                                       bcao:Overlapping_On_One_Side
+                                                                       bcao:Symmetrical_Overlapping
+                                                                       bcao:Unsymmetrical_Overlapping
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bcao:geometry_is ;
+                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+                   owl:disjointWith bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Edge_Standardisation
+bcao:Edge_Standardisation rdf:type owl:Class ;
+                          rdfs:subClassOf bcao:Product_Edge_Goeometry ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:standardisation_is ;
+                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( bcao:Half_Standardised
+                                                                              bcao:Made_On_Site
+                                                                              bcao:Pre-made
+                                                                            )
+                                                              ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:standardisation_is ;
+                                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                          ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Fixing_Factors
+bcao:Fixing_Factors rdf:type owl:Class ;
+                    rdfs:subClassOf bcao:Connection_Factors ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty bcao:fixing_is ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( bcao:Accessible
+                                                                        bcao:Not_Accessible
+                                                                      )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty bcao:has_opperation_that ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( bcao:Cause_Damage
+                                                                        bcao:Cause_No_Damage
+                                                                        bcao:Cause_Repairable_Damage
+                                                                      )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty bcao:fixing_is ;
+                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                    ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Half_Standardised
+bcao:Half_Standardised rdf:type owl:Class ;
+                       rdfs:subClassOf bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Hard_Chemical
+bcao:Hard_Chemical rdf:type owl:Class ;
+                   rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Insert_On_One_Side
+bcao:Insert_On_One_Side rdf:type owl:Class ;
+                        rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Insert_On_Two_Sides
+bcao:Insert_On_Two_Sides rdf:type owl:Class ;
+                         rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Integral
+bcao:Integral rdf:type owl:Class ;
+              rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Integral_With_Inserts
+bcao:Integral_With_Inserts rdf:type owl:Class ;
+                           rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Knot
+bcao:Knot rdf:type owl:Class ;
+          rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Linear
+bcao:Linear rdf:type owl:Class ;
+            rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Made_On_Site
+bcao:Made_On_Site rdf:type owl:Class ;
+                  rdfs:subClassOf bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Material
+bcao:Material rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Morphology_Of_Joints
+bcao:Morphology_Of_Joints rdf:type owl:Class ;
+                          rdfs:subClassOf bcao:Connection_Factors ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:morphology_is ;
+                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( bcao:Knot
+                                                                              bcao:Linear
+                                                                              bcao:Point
+                                                                              bcao:Service
+                                                                            )
+                                                              ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:morphology_is ;
+                                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                          ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Non-virgin_Input
+bcao:Non-virgin_Input rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Not_Accessible
+bcao:Not_Accessible rdf:type owl:Class ;
+                    rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Open_Linear
+bcao:Open_Linear rdf:type owl:Class ;
+                 rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Overlapping_On_One_Side
+bcao:Overlapping_On_One_Side rdf:type owl:Class ;
+                             rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Point
+bcao:Point rdf:type owl:Class ;
+           rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Pre-made
+bcao:Pre-made rdf:type owl:Class ;
+              rdfs:subClassOf bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Product
+bcao:Product rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:has_disassembly_factors ;
+                               owl:someValuesFrom bcao:Disassembly_Factors
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:is_made_of ;
+                               owl:someValuesFrom bcao:Material
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:is_manufactured_by ;
+                               owl:someValuesFrom bcao:Company
+                             ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Product_Edge_Goeometry
+bcao:Product_Edge_Goeometry rdf:type owl:Class ;
+                            rdfs:subClassOf bcao:Disassembly_Factors ,
+                                            [ owl:intersectionOf ( bcao:Disassembly_Factors
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty bcao:has_geometry_factors ;
+                                                                     owl:someValuesFrom bcao:Edge_Geometry
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ,
+                                            [ owl:intersectionOf ( bcao:Disassembly_Factors
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty bcao:has_geometry_factors ;
+                                                                     owl:someValuesFrom bcao:Edge_Standardisation
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Reusable_Output
+bcao:Reusable_Output rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Service
+bcao:Service rdf:type owl:Class ;
+             rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Soft_Chemical
+bcao:Soft_Chemical rdf:type owl:Class ;
+                   rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Symmetrical_Overlapping
+bcao:Symmetrical_Overlapping rdf:type owl:Class ;
+                             rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Unsymmetrical_Overlapping
+bcao:Unsymmetrical_Overlapping rdf:type owl:Class ;
+                               rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#With_Additional_Fixing_Devices
+bcao:With_Additional_Fixing_Devices rdf:type owl:Class ;
+                                    rdfs:subClassOf bcao:Connection .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Accessible
+                bcao:Cause_Damage
+                bcao:Cause_No_Damage
+                bcao:Cause_Repairable_Damage
+                bcao:Not_Accessible
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Accessory_External
+                bcao:Accessory_Internal
+                bcao:Chemical
+                bcao:Hard_Chemical
+                bcao:Integral
+                bcao:Integral_With_Inserts
+                bcao:Soft_Chemical
+                bcao:With_Additional_Fixing_Devices
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Company
+                bcao:Disassembly_Factors
+                bcao:Material
+                bcao:Non-virgin_Input
+                bcao:Product
+                bcao:Reusable_Output
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Company
+                bcao:Material
+                bcao:Product
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Connection
+                bcao:Fixing_Factors
+                bcao:Morphology_Of_Joints
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Half_Standardised
+                bcao:Made_On_Site
+                bcao:Pre-made
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Insert_On_One_Side
+                bcao:Insert_On_Two_Sides
+                bcao:Open_Linear
+                bcao:Overlapping_On_One_Side
+                bcao:Symmetrical_Overlapping
+                bcao:Unsymmetrical_Overlapping
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
