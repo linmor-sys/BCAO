@@ -140,8 +140,9 @@ bcao:has_company_location rdf:type owl:DatatypeProperty ;
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#has_life_span
-bcao:has_life_span rdf:type owl:DatatypeProperty ,
-                            owl:FunctionalProperty ;
+bcao:has_life_span rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdf:type owl:FunctionalProperty ;
                    rdfs:domain bcao:Product ;
                    rdfs:range xsd:integer .
 
@@ -173,8 +174,9 @@ bcao:has_material_name rdf:type owl:DatatypeProperty ;
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#has_material_type
-bcao:has_material_type rdf:type owl:DatatypeProperty ,
-                                owl:FunctionalProperty ;
+bcao:has_material_type rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdf:type owl:FunctionalProperty ;
                        rdfs:domain bcao:Material ;
                        rdfs:range rdfs:Literal .
 
@@ -342,6 +344,10 @@ bcao:Connection_Factors rdf:type owl:Class ;
                                                                ]
                                                              ) ;
                                           rdf:type owl:Class
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty bcao:has_joint_morphology ;
+                                          owl:allValuesFrom bcao:Morphology_Of_Joints
                                         ] .
 
 
