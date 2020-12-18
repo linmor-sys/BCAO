@@ -42,9 +42,6 @@
         <Class IRI="#Connection"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Connection_Factors"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Direct_Chemical"/>
     </Declaration>
     <Declaration>
@@ -55,9 +52,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Direct_With_Additional_Fixing_Devices"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Disassembly_Factors"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Edge_Geometry"/>
@@ -114,9 +108,6 @@
         <Class IRI="#Product"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Product_Edge_Goeometry"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Reusable_Output"/>
     </Declaration>
     <Declaration>
@@ -138,12 +129,6 @@
         <ObjectProperty IRI="#connection_is"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#describes_edge_geometry"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#describes_edge_standardisation"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#fixing_is"/>
     </Declaration>
     <Declaration>
@@ -153,16 +138,13 @@
         <ObjectProperty IRI="#has_connection"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#has_connection_factors"/>
+        <ObjectProperty IRI="#has_edge_geometry"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#has_disassembly_factors"/>
+        <ObjectProperty IRI="#has_edge_standardisation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#has_fixing_factors"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_geometry_factors"/>
+        <ObjectProperty IRI="#has_fixing"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#has_joint_morphology"/>
@@ -268,10 +250,6 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Connection"/>
-        <Class IRI="#Connection_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Connection"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#connection_is"/>
             <ObjectUnionOf>
@@ -293,40 +271,6 @@
         </ObjectMinCardinality>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Connection_Factors"/>
-        <Class IRI="#Disassembly_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Connection_Factors"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Disassembly_Factors"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#has_connection_factors"/>
-                <Class IRI="#Connection"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Connection_Factors"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Disassembly_Factors"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#has_fixing_factors"/>
-                <Class IRI="#Fixing_Factors"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Connection_Factors"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Disassembly_Factors"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#has_joint_morphology"/>
-                <Class IRI="#Morphology_Of_Joints"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Direct_Chemical"/>
         <Class IRI="#Connection"/>
     </SubClassOf>
@@ -341,10 +285,6 @@
     <SubClassOf>
         <Class IRI="#Direct_With_Additional_Fixing_Devices"/>
         <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Edge_Geometry"/>
-        <Class IRI="#Product_Edge_Goeometry"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Edge_Geometry"/>
@@ -365,10 +305,6 @@
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#geometry_is"/>
         </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Edge_Standardisation"/>
-        <Class IRI="#Product_Edge_Goeometry"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Edge_Standardisation"/>
@@ -394,10 +330,6 @@
     <SubClassOf>
         <Class IRI="#Filled_With_Soft_Chemical"/>
         <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fixing_Factors"/>
-        <Class IRI="#Connection_Factors"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fixing_Factors"/>
@@ -435,8 +367,18 @@
         <Class IRI="#Edge_Standardisation"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Morphology_Of_Joints"/>
-        <Class IRI="#Connection_Factors"/>
+        <Class IRI="#Material"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_non-virgin_input"/>
+            <Class IRI="#Non-virgin_Input"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_reusable_output"/>
+            <Class IRI="#Reusable_Output"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Morphology_Of_Joints"/>
@@ -479,8 +421,36 @@
     <SubClassOf>
         <Class IRI="#Product"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_disassembly_factors"/>
-            <Class IRI="#Disassembly_Factors"/>
+            <ObjectProperty IRI="#has_connection"/>
+            <Class IRI="#Connection"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_edge_geometry"/>
+            <Class IRI="#Edge_Geometry"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_edge_standardisation"/>
+            <Class IRI="#Edge_Standardisation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_fixing"/>
+            <Class IRI="#Fixing_Factors"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Product"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has_joint_morphology"/>
+            <Class IRI="#Morphology_Of_Joints"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -496,30 +466,6 @@
             <ObjectProperty IRI="#is_manufactured_by"/>
             <Class IRI="#Company"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product_Edge_Goeometry"/>
-        <Class IRI="#Disassembly_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product_Edge_Goeometry"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Disassembly_Factors"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#has_geometry_factors"/>
-                <Class IRI="#Edge_Geometry"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product_Edge_Goeometry"/>
-        <ObjectIntersectionOf>
-            <Class IRI="#Disassembly_Factors"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#has_geometry_factors"/>
-                <Class IRI="#Edge_Standardisation"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Service"/>
@@ -560,8 +506,12 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#Company"/>
-        <Class IRI="#Disassembly_Factors"/>
+        <Class IRI="#Connection"/>
+        <Class IRI="#Edge_Geometry"/>
+        <Class IRI="#Edge_Standardisation"/>
+        <Class IRI="#Fixing_Factors"/>
         <Class IRI="#Material"/>
+        <Class IRI="#Morphology_Of_Joints"/>
         <Class IRI="#Non-virgin_Input"/>
         <Class IRI="#Product"/>
         <Class IRI="#Reusable_Output"/>
@@ -598,14 +548,6 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#describes_edge_geometry"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#describes_edge_standardisation"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#fixing_is"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -618,15 +560,15 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_connection_factors"/>
+        <ObjectProperty IRI="#has_edge_geometry"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_fixing_factors"/>
+        <ObjectProperty IRI="#has_edge_standardisation"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_geometry_factors"/>
+        <ObjectProperty IRI="#has_fixing"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -649,6 +591,10 @@
         <ObjectProperty IRI="#morphology_is"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#standardisation_is"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#is_manufactured_by"/>
     </FunctionalObjectProperty>
@@ -656,32 +602,24 @@
         <ObjectProperty IRI="#is_produced_by"/>
     </FunctionalObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#describes_edge_geometry"/>
-        <Class IRI="#Product_Edge_Goeometry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#describes_edge_standardisation"/>
-        <Class IRI="#Product_Edge_Goeometry"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#has_connection"/>
-        <Class IRI="#Connection_Factors"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_connection_factors"/>
-        <Class IRI="#Disassembly_Factors"/>
+        <ObjectProperty IRI="#has_edge_geometry"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_fixing_factors"/>
-        <Class IRI="#Connection_Factors"/>
+        <ObjectProperty IRI="#has_edge_standardisation"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_geometry_factors"/>
-        <Class IRI="#Disassembly_Factors"/>
+        <ObjectProperty IRI="#has_fixing"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#has_joint_morphology"/>
-        <Class IRI="#Connection_Factors"/>
+        <Class IRI="#Product"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#has_non-virgin_input"/>
@@ -692,32 +630,32 @@
         <Class IRI="#Material"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_made_of"/>
+        <Class IRI="#Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_manufactured_by"/>
+        <Class IRI="#Product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_produced_by"/>
         <Class IRI="#Material"/>
     </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#describes_edge_geometry"/>
-        <Class IRI="#Edge_Geometry"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#describes_edge_standardisation"/>
-        <Class IRI="#Edge_Standardisation"/>
-    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#has_connection"/>
         <Class IRI="#Connection"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_connection_factors"/>
-        <Class IRI="#Connection_Factors"/>
+        <ObjectProperty IRI="#has_edge_geometry"/>
+        <Class IRI="#Edge_Geometry"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_fixing_factors"/>
+        <ObjectProperty IRI="#has_edge_standardisation"/>
+        <Class IRI="#Edge_Standardisation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_fixing"/>
         <Class IRI="#Fixing_Factors"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_geometry_factors"/>
-        <Class IRI="#Product_Edge_Goeometry"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#has_joint_morphology"/>
@@ -730,6 +668,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#has_reusable_output"/>
         <Class IRI="#Reusable_Output"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_made_of"/>
+        <Class IRI="#Material"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_manufactured_by"/>
+        <Class IRI="#Company"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#is_produced_by"/>
