@@ -1,861 +1,625 @@
-<?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://github.com/linmor-sys/BCAO.owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="https://github.com/linmor-sys/BCAO.owl">
-    <Prefix name="" IRI="https://github.com/linmor-sys/BCAO.owl"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="bcao" IRI="https://github.com/linmor-sys/BCAO.owl#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">MSc thesis project with the aim of proposing an ontology for Building&apos;s Circularity Assessment (BCAO)</Literal>
-    </Annotation>
-    <Declaration>
-        <Class IRI="#Accessible"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Accessible_With_Causing_Damage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Accessible_With_Causing_No_Damage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Accessible_With_Causing_Repairable_Damage"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Accessory_External"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Accessory_Internal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Company"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Connection"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Direct_Chemical"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Direct_Integral"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Direct_Integral_With_Inserts"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Direct_With_Additional_Fixing_Devices"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Edge_Geometry"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Edge_Standardisation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Filled_With_Hard_Chemical"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Filled_With_Soft_Chemical"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Fixing_Factors"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Half_Standardised"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Knot"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Linear"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Made_On_Site"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Material"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Non-virgin_Input"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Not_Accessible"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Open_Linear"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Overlapping_On_One_Side"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Point"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pre-made"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Product"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Reusable_Output"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Service"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Symmetrical_Overlapping"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Unsymmetrical_Overlapping"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#With_Insert_On_One_Side"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#With_Insert_On_Two_Sides"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#connection_is"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#fixing_is"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#geometry_is"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_connection"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_edge_geometry"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_edge_standardisation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_fixing"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_joint_morphology"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_non-virgin_input"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_reusable_output"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_made_of"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_manufactured_by"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_produced_by"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#morphology_is"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#standardisation_is"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_company_location"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_company_name"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_company_type"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_life_span"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_material_ID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_material_description"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_material_mass"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_material_name"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_material_type"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_model"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_non-virgin_input_mass"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_product_ID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_product_description"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_product_location"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_product_name"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_product_type"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_reference_year"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_reusable_output_mass"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#Accessible"/>
-        <Class IRI="#Fixing_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Accessible_With_Causing_Damage"/>
-        <Class IRI="#Fixing_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Accessible_With_Causing_No_Damage"/>
-        <Class IRI="#Fixing_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Accessible_With_Causing_Repairable_Damage"/>
-        <Class IRI="#Fixing_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Accessory_External"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Accessory_Internal"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Connection"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#connection_is"/>
-            <ObjectUnionOf>
-                <Class IRI="#Accessory_External"/>
-                <Class IRI="#Accessory_Internal"/>
-                <Class IRI="#Direct_Chemical"/>
-                <Class IRI="#Direct_Integral"/>
-                <Class IRI="#Direct_Integral_With_Inserts"/>
-                <Class IRI="#Direct_With_Additional_Fixing_Devices"/>
-                <Class IRI="#Filled_With_Hard_Chemical"/>
-                <Class IRI="#Filled_With_Soft_Chemical"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Connection"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#connection_is"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Direct_Chemical"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Direct_Integral"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Direct_Integral_With_Inserts"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Direct_With_Additional_Fixing_Devices"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Edge_Geometry"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#geometry_is"/>
-            <ObjectUnionOf>
-                <Class IRI="#Open_Linear"/>
-                <Class IRI="#Overlapping_On_One_Side"/>
-                <Class IRI="#Symmetrical_Overlapping"/>
-                <Class IRI="#Unsymmetrical_Overlapping"/>
-                <Class IRI="#With_Insert_On_One_Side"/>
-                <Class IRI="#With_Insert_On_Two_Sides"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Edge_Geometry"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#geometry_is"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Edge_Standardisation"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#standardisation_is"/>
-            <ObjectUnionOf>
-                <Class IRI="#Half_Standardised"/>
-                <Class IRI="#Made_On_Site"/>
-                <Class IRI="#Pre-made"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Edge_Standardisation"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#standardisation_is"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Filled_With_Hard_Chemical"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Filled_With_Soft_Chemical"/>
-        <Class IRI="#Connection"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fixing_Factors"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#fixing_is"/>
-            <ObjectUnionOf>
-                <Class IRI="#Accessible"/>
-                <Class IRI="#Accessible_With_Causing_Damage"/>
-                <Class IRI="#Accessible_With_Causing_No_Damage"/>
-                <Class IRI="#Accessible_With_Causing_Repairable_Damage"/>
-                <Class IRI="#Not_Accessible"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Fixing_Factors"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#fixing_is"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Half_Standardised"/>
-        <Class IRI="#Edge_Standardisation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Knot"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Linear"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Made_On_Site"/>
-        <Class IRI="#Edge_Standardisation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Material"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_non-virgin_input"/>
-            <Class IRI="#Non-virgin_Input"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Material"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_reusable_output"/>
-            <Class IRI="#Reusable_Output"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Morphology_Of_Joints"/>
-        <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#morphology_is"/>
-            <ObjectUnionOf>
-                <Class IRI="#Knot"/>
-                <Class IRI="#Linear"/>
-                <Class IRI="#Point"/>
-                <Class IRI="#Service"/>
-            </ObjectUnionOf>
-        </ObjectAllValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Morphology_Of_Joints"/>
-        <ObjectMinCardinality cardinality="1">
-            <ObjectProperty IRI="#morphology_is"/>
-        </ObjectMinCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Not_Accessible"/>
-        <Class IRI="#Fixing_Factors"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Open_Linear"/>
-        <Class IRI="#Edge_Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Overlapping_On_One_Side"/>
-        <Class IRI="#Edge_Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Point"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Pre-made"/>
-        <Class IRI="#Edge_Standardisation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_connection"/>
-            <Class IRI="#Connection"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_edge_geometry"/>
-            <Class IRI="#Edge_Geometry"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_edge_standardisation"/>
-            <Class IRI="#Edge_Standardisation"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_fixing"/>
-            <Class IRI="#Fixing_Factors"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#has_joint_morphology"/>
-            <Class IRI="#Morphology_Of_Joints"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#is_made_of"/>
-            <Class IRI="#Material"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Product"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#is_manufactured_by"/>
-            <Class IRI="#Company"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Service"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Symmetrical_Overlapping"/>
-        <Class IRI="#Edge_Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Unsymmetrical_Overlapping"/>
-        <Class IRI="#Edge_Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#With_Insert_On_One_Side"/>
-        <Class IRI="#Edge_Geometry"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#With_Insert_On_Two_Sides"/>
-        <Class IRI="#Edge_Geometry"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="#Accessible"/>
-        <Class IRI="#Accessible_With_Causing_Damage"/>
-        <Class IRI="#Accessible_With_Causing_No_Damage"/>
-        <Class IRI="#Accessible_With_Causing_Repairable_Damage"/>
-        <Class IRI="#Not_Accessible"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Accessory_External"/>
-        <Class IRI="#Accessory_Internal"/>
-        <Class IRI="#Direct_Chemical"/>
-        <Class IRI="#Direct_Integral"/>
-        <Class IRI="#Direct_Integral_With_Inserts"/>
-        <Class IRI="#Direct_With_Additional_Fixing_Devices"/>
-        <Class IRI="#Filled_With_Hard_Chemical"/>
-        <Class IRI="#Filled_With_Soft_Chemical"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Company"/>
-        <Class IRI="#Connection"/>
-        <Class IRI="#Edge_Geometry"/>
-        <Class IRI="#Edge_Standardisation"/>
-        <Class IRI="#Fixing_Factors"/>
-        <Class IRI="#Material"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-        <Class IRI="#Non-virgin_Input"/>
-        <Class IRI="#Product"/>
-        <Class IRI="#Reusable_Output"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Company"/>
-        <Class IRI="#Material"/>
-        <Class IRI="#Product"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Connection"/>
-        <Class IRI="#Fixing_Factors"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Edge_Geometry"/>
-        <Class IRI="#Edge_Standardisation"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Half_Standardised"/>
-        <Class IRI="#Made_On_Site"/>
-        <Class IRI="#Pre-made"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Open_Linear"/>
-        <Class IRI="#Overlapping_On_One_Side"/>
-        <Class IRI="#Symmetrical_Overlapping"/>
-        <Class IRI="#Unsymmetrical_Overlapping"/>
-        <Class IRI="#With_Insert_On_One_Side"/>
-        <Class IRI="#With_Insert_On_Two_Sides"/>
-    </DisjointClasses>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#connection_is"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#fixing_is"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#geometry_is"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_connection"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_edge_geometry"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_edge_standardisation"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_fixing"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_joint_morphology"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_non-virgin_input"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#has_reusable_output"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#is_made_of"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#morphology_is"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#standardisation_is"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#is_manufactured_by"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#is_produced_by"/>
-    </FunctionalObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_connection"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_edge_geometry"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_edge_standardisation"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_fixing"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_joint_morphology"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_non-virgin_input"/>
-        <Class IRI="#Material"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#has_reusable_output"/>
-        <Class IRI="#Material"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_made_of"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_manufactured_by"/>
-        <Class IRI="#Product"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#is_produced_by"/>
-        <Class IRI="#Material"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_connection"/>
-        <Class IRI="#Connection"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_edge_geometry"/>
-        <Class IRI="#Edge_Geometry"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_edge_standardisation"/>
-        <Class IRI="#Edge_Standardisation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_fixing"/>
-        <Class IRI="#Fixing_Factors"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_joint_morphology"/>
-        <Class IRI="#Morphology_Of_Joints"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_non-virgin_input"/>
-        <Class IRI="#Non-virgin_Input"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#has_reusable_output"/>
-        <Class IRI="#Reusable_Output"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_made_of"/>
-        <Class IRI="#Material"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_manufactured_by"/>
-        <Class IRI="#Company"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#is_produced_by"/>
-        <Class IRI="#Company"/>
-    </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#has_material_name"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_life_span"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_material_mass"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_material_type"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_model"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_non-virgin_input_mass"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_product_ID"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_reference_year"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_reusable_output_mass"/>
-    </FunctionalDataProperty>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_company_location"/>
-        <Class IRI="#Company"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_company_name"/>
-        <Class IRI="#Company"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_company_type"/>
-        <Class IRI="#Company"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_life_span"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_material_ID"/>
-        <Class IRI="#Material"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_material_description"/>
-        <Class IRI="#Material"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_material_mass"/>
-        <Class IRI="#Material"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_material_name"/>
-        <Class IRI="#Material"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_material_type"/>
-        <Class IRI="#Material"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_model"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_non-virgin_input_mass"/>
-        <Class IRI="#Non-virgin_Input"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_product_ID"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_product_description"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_product_location"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_product_name"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_product_type"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_reference_year"/>
-        <Class IRI="#Product"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_reusable_output_mass"/>
-        <Class IRI="#Reusable_Output"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_company_location"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_company_name"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_company_type"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_life_span"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_material_ID"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_material_description"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_material_mass"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_material_name"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_material_type"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_model"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_non-virgin_input_mass"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_product_ID"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_product_description"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_product_location"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_product_name"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_product_type"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_reference_year"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_reusable_output_mass"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
-    </DataPropertyRange>
-</Ontology>
+@prefix : <https://github.com/linmor-sys/BCAO.owl> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bcao: <https://github.com/linmor-sys/BCAO.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://github.com/linmor-sys/BCAO.owl> .
+
+<https://github.com/linmor-sys/BCAO.owl> rdf:type owl:Ontology ;
+                                          rdfs:comment "MSc thesis project with the aim of proposing an ontology for Building's Circularity Assessment (BCAO)"^^rdfs:Literal .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://github.com/linmor-sys/BCAO.owl#connection_is
+bcao:connection_is rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  https://github.com/linmor-sys/BCAO.owl#fixing_is
+bcao:fixing_is rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
+###  https://github.com/linmor-sys/BCAO.owl#geometry_is
+bcao:geometry_is rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_connection
+bcao:has_connection rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain bcao:Product ;
+                    rdfs:range bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_edge_geometry
+bcao:has_edge_geometry rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain bcao:Product ;
+                       rdfs:range bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_edge_standardisation
+bcao:has_edge_standardisation rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              rdfs:domain bcao:Product ;
+                              rdfs:range bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_fixing
+bcao:has_fixing rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain bcao:Product ;
+                rdfs:range bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_joint_morphology
+bcao:has_joint_morphology rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain bcao:Product ;
+                          rdfs:range bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_non-virgin_input
+bcao:has_non-virgin_input rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty ;
+                          rdfs:domain bcao:Material ;
+                          rdfs:range bcao:Non-virgin_Input .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_reusable_output
+bcao:has_reusable_output rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain bcao:Material ;
+                         rdfs:range bcao:Reusable_Output .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_made_of
+bcao:is_made_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain bcao:Product ;
+                rdfs:range bcao:Material .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_manufactured_by
+bcao:is_manufactured_by rdf:type owl:ObjectProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain bcao:Product ;
+                        rdfs:range bcao:Manufacturer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_part_of
+bcao:is_part_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain bcao:Material ;
+                rdfs:range bcao:Product .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_produced_by
+bcao:is_produced_by rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain bcao:Material ;
+                    rdfs:range bcao:Manufacturer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#manufactures
+bcao:manufactures rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain bcao:Manufacturer ;
+                  rdfs:range bcao:Product .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#morphology_is
+bcao:morphology_is rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#produces
+bcao:produces rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain bcao:Manufacturer ;
+              rdfs:range bcao:Material .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#standardisation_is
+bcao:standardisation_is rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://github.com/linmor-sys/BCAO.owl#has_company_location
+bcao:has_company_location rdf:type owl:DatatypeProperty ;
+                          rdfs:domain bcao:Manufacturer ;
+                          rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_company_name
+bcao:has_company_name rdf:type owl:DatatypeProperty ;
+                      rdfs:domain bcao:Manufacturer ;
+                      rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_company_type
+bcao:has_company_type rdf:type owl:DatatypeProperty ;
+                      rdfs:domain bcao:Manufacturer ;
+                      rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_life_span
+bcao:has_life_span rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain bcao:Product ;
+                   rdfs:range xsd:integer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_ID
+bcao:has_material_ID rdf:type owl:DatatypeProperty ;
+                     rdfs:domain bcao:Material ;
+                     rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_description
+bcao:has_material_description rdf:type owl:DatatypeProperty ;
+                              rdfs:domain bcao:Material ;
+                              rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_mass
+bcao:has_material_mass rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain bcao:Material ;
+                       rdfs:range xsd:float .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_name
+bcao:has_material_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain bcao:Material ;
+                       rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_material_type
+bcao:has_material_type rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain bcao:Material ;
+                       rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_non-virgin_input_mass
+bcao:has_non-virgin_input_mass rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain bcao:Non-virgin_Input ;
+                               rdfs:range xsd:float .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_ID
+bcao:has_product_ID rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain bcao:Product ;
+                    rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_location
+bcao:has_product_location rdf:type owl:DatatypeProperty ;
+                          rdfs:domain bcao:Product ;
+                          rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_name
+bcao:has_product_name rdf:type owl:DatatypeProperty ;
+                      rdfs:domain bcao:Product ;
+                      rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_product_type
+bcao:has_product_type rdf:type owl:DatatypeProperty ;
+                      rdfs:domain bcao:Product ;
+                      rdfs:range rdfs:Literal .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_reference_year
+bcao:has_reference_year rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain bcao:Product ;
+                        rdfs:range xsd:integer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#has_reusable_output_mass
+bcao:has_reusable_output_mass rdf:type owl:DatatypeProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain bcao:Reusable_Output ;
+                              rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessible
+bcao:Accessible rdf:type owl:Class ;
+                rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessible_With_Causing_Damage
+bcao:Accessible_With_Causing_Damage rdf:type owl:Class ;
+                                    rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessible_With_Causing_No_Damage
+bcao:Accessible_With_Causing_No_Damage rdf:type owl:Class ;
+                                       rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessible_With_Causing_Repairable_Damage
+bcao:Accessible_With_Causing_Repairable_Damage rdf:type owl:Class ;
+                                               rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessory_External
+bcao:Accessory_External rdf:type owl:Class ;
+                        rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Accessory_Internal
+bcao:Accessory_Internal rdf:type owl:Class ;
+                        rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Connection
+bcao:Connection rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty bcao:connection_is ;
+                                  owl:allValuesFrom [ rdf:type owl:Class ;
+                                                      owl:unionOf ( bcao:Accessory_External
+                                                                    bcao:Accessory_Internal
+                                                                    bcao:Direct_Chemical
+                                                                    bcao:Direct_Integral
+                                                                    bcao:Direct_Integral_With_Inserts
+                                                                    bcao:Direct_With_Additional_Fixing_Devices
+                                                                    bcao:Filled_With_Hard_Chemical
+                                                                    bcao:Filled_With_Soft_Chemical
+                                                                  )
+                                                    ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty bcao:connection_is ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Direct_Chemical
+bcao:Direct_Chemical rdf:type owl:Class ;
+                     rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Direct_Integral
+bcao:Direct_Integral rdf:type owl:Class ;
+                     rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Direct_Integral_With_Inserts
+bcao:Direct_Integral_With_Inserts rdf:type owl:Class ;
+                                  rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Direct_With_Additional_Fixing_Devices
+bcao:Direct_With_Additional_Fixing_Devices rdf:type owl:Class ;
+                                           rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Edge_Geometry
+bcao:Edge_Geometry rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty bcao:geometry_is ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( bcao:Open_Linear
+                                                                       bcao:Overlapping_On_One_Side
+                                                                       bcao:Symmetrical_Overlapping
+                                                                       bcao:Unsymmetrical_Overlapping
+                                                                       bcao:With_Insert_On_One_Side
+                                                                       bcao:With_Insert_On_Two_Sides
+                                                                     )
+                                                       ]
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty bcao:geometry_is ;
+                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+                   owl:disjointWith bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Edge_Standardisation
+bcao:Edge_Standardisation rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:standardisation_is ;
+                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( bcao:Half_Standardised
+                                                                              bcao:Made_On_Site
+                                                                              bcao:Pre-made
+                                                                            )
+                                                              ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:standardisation_is ;
+                                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                          ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Filled_With_Hard_Chemical
+bcao:Filled_With_Hard_Chemical rdf:type owl:Class ;
+                               rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Filled_With_Soft_Chemical
+bcao:Filled_With_Soft_Chemical rdf:type owl:Class ;
+                               rdfs:subClassOf bcao:Connection .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Fixing_Factors
+bcao:Fixing_Factors rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty bcao:fixing_is ;
+                                      owl:allValuesFrom [ rdf:type owl:Class ;
+                                                          owl:unionOf ( bcao:Accessible
+                                                                        bcao:Accessible_With_Causing_Damage
+                                                                        bcao:Accessible_With_Causing_No_Damage
+                                                                        bcao:Accessible_With_Causing_Repairable_Damage
+                                                                        bcao:Not_Accessible
+                                                                      )
+                                                        ]
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty bcao:fixing_is ;
+                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                    ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Half_Standardised
+bcao:Half_Standardised rdf:type owl:Class ;
+                       rdfs:subClassOf bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Knot
+bcao:Knot rdf:type owl:Class ;
+          rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Linear
+bcao:Linear rdf:type owl:Class ;
+            rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Made_On_Site
+bcao:Made_On_Site rdf:type owl:Class ;
+                  rdfs:subClassOf bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Manufacturer
+bcao:Manufacturer rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty bcao:manufactures ;
+                                    owl:someValuesFrom bcao:Product
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty bcao:produces ;
+                                    owl:someValuesFrom bcao:Material
+                                  ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Material
+bcao:Material rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty bcao:has_non-virgin_input ;
+                                owl:someValuesFrom bcao:Non-virgin_Input
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty bcao:has_reusable_output ;
+                                owl:someValuesFrom bcao:Reusable_Output
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty bcao:is_part_of ;
+                                owl:someValuesFrom bcao:Product
+                              ] ;
+              owl:disjointWith [ rdf:type owl:Restriction ;
+                                 owl:onProperty bcao:is_manufactured_by ;
+                                 owl:someValuesFrom bcao:Manufacturer
+                               ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Morphology_Of_Joints
+bcao:Morphology_Of_Joints rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:morphology_is ;
+                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( bcao:Knot
+                                                                              bcao:Linear
+                                                                              bcao:Point
+                                                                              bcao:Service
+                                                                            )
+                                                              ]
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty bcao:morphology_is ;
+                                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                          ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Non-virgin_Input
+bcao:Non-virgin_Input rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Not_Accessible
+bcao:Not_Accessible rdf:type owl:Class ;
+                    rdfs:subClassOf bcao:Fixing_Factors .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Open_Linear
+bcao:Open_Linear rdf:type owl:Class ;
+                 rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Overlapping_On_One_Side
+bcao:Overlapping_On_One_Side rdf:type owl:Class ;
+                             rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Point
+bcao:Point rdf:type owl:Class ;
+           rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Pre-made
+bcao:Pre-made rdf:type owl:Class ;
+              rdfs:subClassOf bcao:Edge_Standardisation .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Product
+bcao:Product rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:has_connection ;
+                               owl:someValuesFrom bcao:Connection
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:has_edge_geometry ;
+                               owl:someValuesFrom bcao:Edge_Geometry
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:has_edge_standardisation ;
+                               owl:someValuesFrom bcao:Edge_Standardisation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:has_fixing ;
+                               owl:someValuesFrom bcao:Fixing_Factors
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:has_joint_morphology ;
+                               owl:someValuesFrom bcao:Morphology_Of_Joints
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:is_made_of ;
+                               owl:someValuesFrom bcao:Material
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty bcao:is_manufactured_by ;
+                               owl:someValuesFrom bcao:Manufacturer
+                             ] ;
+             owl:disjointWith [ rdf:type owl:Restriction ;
+                                owl:onProperty bcao:is_produced_by ;
+                                owl:someValuesFrom bcao:Manufacturer
+                              ] .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Reusable_Output
+bcao:Reusable_Output rdf:type owl:Class .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Service
+bcao:Service rdf:type owl:Class ;
+             rdfs:subClassOf bcao:Morphology_Of_Joints .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Symmetrical_Overlapping
+bcao:Symmetrical_Overlapping rdf:type owl:Class ;
+                             rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#Unsymmetrical_Overlapping
+bcao:Unsymmetrical_Overlapping rdf:type owl:Class ;
+                               rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#With_Insert_On_One_Side
+bcao:With_Insert_On_One_Side rdf:type owl:Class ;
+                             rdfs:subClassOf bcao:Edge_Geometry .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#With_Insert_On_Two_Sides
+bcao:With_Insert_On_Two_Sides rdf:type owl:Class ;
+                              rdfs:subClassOf bcao:Edge_Geometry .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Accessible
+                bcao:Accessible_With_Causing_Damage
+                bcao:Accessible_With_Causing_No_Damage
+                bcao:Accessible_With_Causing_Repairable_Damage
+                bcao:Not_Accessible
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Accessory_External
+                bcao:Accessory_Internal
+                bcao:Direct_Chemical
+                bcao:Direct_Integral
+                bcao:Direct_Integral_With_Inserts
+                bcao:Direct_With_Additional_Fixing_Devices
+                bcao:Filled_With_Hard_Chemical
+                bcao:Filled_With_Soft_Chemical
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Connection
+                bcao:Edge_Geometry
+                bcao:Edge_Standardisation
+                bcao:Fixing_Factors
+                bcao:Manufacturer
+                bcao:Material
+                bcao:Morphology_Of_Joints
+                bcao:Non-virgin_Input
+                bcao:Product
+                bcao:Reusable_Output
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Connection
+                bcao:Fixing_Factors
+                bcao:Morphology_Of_Joints
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Half_Standardised
+                bcao:Made_On_Site
+                bcao:Pre-made
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Manufacturer
+                bcao:Material
+                bcao:Product
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Open_Linear
+                bcao:Overlapping_On_One_Side
+                bcao:Symmetrical_Overlapping
+                bcao:Unsymmetrical_Overlapping
+                bcao:With_Insert_On_One_Side
+                bcao:With_Insert_On_Two_Sides
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

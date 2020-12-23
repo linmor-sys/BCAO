@@ -89,19 +89,40 @@ bcao:is_made_of rdf:type owl:ObjectProperty ;
 bcao:is_manufactured_by rdf:type owl:ObjectProperty ,
                                  owl:FunctionalProperty ;
                         rdfs:domain bcao:Product ;
-                        rdfs:range bcao:Company .
+                        rdfs:range bcao:Manufacturer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#is_part_of
+bcao:is_part_of rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain bcao:Material ;
+                rdfs:range bcao:Product .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#is_produced_by
 bcao:is_produced_by rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty ;
                     rdfs:domain bcao:Material ;
-                    rdfs:range bcao:Company .
+                    rdfs:range bcao:Manufacturer .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#manufactures
+bcao:manufactures rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain bcao:Manufacturer ;
+                  rdfs:range bcao:Product .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#morphology_is
 bcao:morphology_is rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://github.com/linmor-sys/BCAO.owl#produces
+bcao:produces rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain bcao:Manufacturer ;
+              rdfs:range bcao:Material .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#standardisation_is
@@ -115,19 +136,19 @@ bcao:standardisation_is rdf:type owl:ObjectProperty ;
 
 ###  https://github.com/linmor-sys/BCAO.owl#has_company_location
 bcao:has_company_location rdf:type owl:DatatypeProperty ;
-                          rdfs:domain bcao:Company ;
+                          rdfs:domain bcao:Manufacturer ;
                           rdfs:range rdfs:Literal .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#has_company_name
 bcao:has_company_name rdf:type owl:DatatypeProperty ;
-                      rdfs:domain bcao:Company ;
+                      rdfs:domain bcao:Manufacturer ;
                       rdfs:range rdfs:Literal .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#has_company_type
 bcao:has_company_type rdf:type owl:DatatypeProperty ;
-                      rdfs:domain bcao:Company ;
+                      rdfs:domain bcao:Manufacturer ;
                       rdfs:range rdfs:Literal .
 
 
@@ -171,13 +192,6 @@ bcao:has_material_type rdf:type owl:DatatypeProperty ,
                        rdfs:range rdfs:Literal .
 
 
-###  https://github.com/linmor-sys/BCAO.owl#has_model
-bcao:has_model rdf:type owl:DatatypeProperty ,
-                        owl:FunctionalProperty ;
-               rdfs:domain bcao:Product ;
-               rdfs:range rdfs:Literal .
-
-
 ###  https://github.com/linmor-sys/BCAO.owl#has_non-virgin_input_mass
 bcao:has_non-virgin_input_mass rdf:type owl:DatatypeProperty ,
                                         owl:FunctionalProperty ;
@@ -190,12 +204,6 @@ bcao:has_product_ID rdf:type owl:DatatypeProperty ,
                              owl:FunctionalProperty ;
                     rdfs:domain bcao:Product ;
                     rdfs:range rdfs:Literal .
-
-
-###  https://github.com/linmor-sys/BCAO.owl#has_product_description
-bcao:has_product_description rdf:type owl:DatatypeProperty ;
-                             rdfs:domain bcao:Product ;
-                             rdfs:range rdfs:Literal .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#has_product_location
@@ -262,10 +270,6 @@ bcao:Accessory_External rdf:type owl:Class ;
 ###  https://github.com/linmor-sys/BCAO.owl#Accessory_Internal
 bcao:Accessory_Internal rdf:type owl:Class ;
                         rdfs:subClassOf bcao:Connection .
-
-
-###  https://github.com/linmor-sys/BCAO.owl#Company
-bcao:Company rdf:type owl:Class .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#Connection
@@ -397,6 +401,18 @@ bcao:Made_On_Site rdf:type owl:Class ;
                   rdfs:subClassOf bcao:Edge_Standardisation .
 
 
+###  https://github.com/linmor-sys/BCAO.owl#Manufacturer
+bcao:Manufacturer rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty bcao:manufactures ;
+                                    owl:someValuesFrom bcao:Product
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty bcao:produces ;
+                                    owl:someValuesFrom bcao:Material
+                                  ] .
+
+
 ###  https://github.com/linmor-sys/BCAO.owl#Material
 bcao:Material rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -406,7 +422,15 @@ bcao:Material rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty bcao:has_reusable_output ;
                                 owl:someValuesFrom bcao:Reusable_Output
-                              ] .
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty bcao:is_part_of ;
+                                owl:someValuesFrom bcao:Product
+                              ] ;
+              owl:disjointWith [ rdf:type owl:Restriction ;
+                                 owl:onProperty bcao:is_manufactured_by ;
+                                 owl:someValuesFrom bcao:Manufacturer
+                               ] .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#Morphology_Of_Joints
@@ -484,8 +508,12 @@ bcao:Product rdf:type owl:Class ;
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty bcao:is_manufactured_by ;
-                               owl:someValuesFrom bcao:Company
-                             ] .
+                               owl:someValuesFrom bcao:Manufacturer
+                             ] ;
+             owl:disjointWith [ rdf:type owl:Restriction ;
+                                owl:onProperty bcao:is_produced_by ;
+                                owl:someValuesFrom bcao:Manufacturer
+                              ] .
 
 
 ###  https://github.com/linmor-sys/BCAO.owl#Reusable_Output
@@ -545,24 +573,16 @@ bcao:With_Insert_On_Two_Sides rdf:type owl:Class ;
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( bcao:Company
-                bcao:Connection
+  owl:members ( bcao:Connection
                 bcao:Edge_Geometry
                 bcao:Edge_Standardisation
                 bcao:Fixing_Factors
+                bcao:Manufacturer
                 bcao:Material
                 bcao:Morphology_Of_Joints
                 bcao:Non-virgin_Input
                 bcao:Product
                 bcao:Reusable_Output
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( bcao:Company
-                bcao:Material
-                bcao:Product
               )
 ] .
 
@@ -579,6 +599,14 @@ bcao:With_Insert_On_Two_Sides rdf:type owl:Class ;
   owl:members ( bcao:Half_Standardised
                 bcao:Made_On_Site
                 bcao:Pre-made
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( bcao:Manufacturer
+                bcao:Material
+                bcao:Product
               )
 ] .
 
